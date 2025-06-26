@@ -1,0 +1,327 @@
+/* Peaceful color palette */
+:root {
+    --primary-color: #4a6b5a;
+    --secondary-color: #e8e8d0;
+    --accent-color: #a7c4b5;
+    --text-color: #333333;
+    --light-text: #f8f8f8;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Crimson Pro', serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    padding: 1rem 0;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 0;
+}
+
+.about {
+    background-color: white;
+}
+
+.activities {
+    background-color: var(--secondary-color);
+}
+
+.resources {
+    background-color: white;
+}
+
+.testimonials {
+    background-color: var(--secondary-color);
+}
+
+.contact {
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 15px auto;
+}
+
+/* Swami Image */
+.swami-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+    margin: 20px auto;
+    display: block;
+    box-shadow: var(--shadow);
+}
+
+/* Quote Styles */
+.quote {
+    font-style: italic;
+    color: var(--primary-color);
+    border-left: 3px solid var(--accent-color);
+    padding: 1rem 1.5rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background-color: rgba(167, 196, 181, 0.1);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Grid and Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.activity-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+/* Resources List */
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resources li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.resources a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.resources a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.shloka {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+}
